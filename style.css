@@ -1,0 +1,26 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #38bdf8;
+}
+
+.card {
+  background: #1e293b;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
