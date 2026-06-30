@@ -1,26 +1,85 @@
+/* ==========================================================================
+   Design System Variables & Core Resets
+   ========================================================================== */
+:root {
+  /* Color Palette */
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #24324d;
+  --text-primary: #ffffff;
+  --text-muted: #cbd5e1;
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  
+  /* Layout & System Styles */
+  --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --radius: 12px;
+  --transition-speed: 0.2s;
+}
+
+/* Global Reset to make layout padding mathematical and predictable */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Typography & Base Styles
+   ========================================================================== */
 body {
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  text-align: center;
+  font-family: var(--font-stack);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
   margin: 0;
-  padding: 20px;
+  padding: 40px 20px; /* Enhanced vertical padding for better section separation */
+  line-height: 1.5; /* Prevents text crowding and boosts accessibility */
+  -webkit-font-smoothing: antialiased; /* Crisp text rendering on macOS/iOS */
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Flexbox Layout: Vertically stacks page contents and centers them horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
-  color: #38bdf8;
+  color: var(--accent);
+  font-size: 2.25rem; /* Responsive sizing base */
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 24px;
+  letter-spacing: -0.025em; /* Cleaner heading spacing */
 }
 
+/* ==========================================================================
+   Components
+   ========================================================================== */
 .card {
-  background: #1e293b;
-  margin: 15px auto;
-  padding: 15px;
-  border-radius: 12px;
-  max-width: 400px;
+  background-color: var(--bg-card);
+  margin-bottom: 20px; /* Predictable bottom margins instead of top-and-bottom */
+  padding: 24px; /* Increased padding for an open, premium UI look */
+  border-radius: var(--radius);
+  width: 100%; /* Spans mobile viewport perfectly */
+  max-width: 440px; /* Safe, comfortable widescreen ceiling */
   text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.03); /* Extremely subtle boundary border */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+/* Visual interaction state for desktop setups */
+.card:hover {
+  background-color: var(--bg-card-hover);
+  transform: translateY(-2px);
 }
 
 label {
-  display: block;
-  margin: 8px 0;
+  display: flex; /* Flex layout allows icon alignments or inline checkboxes later */
+  align-items: center;
+  gap: 10px; /* Clean gap between form control elements */
+  margin: 12px 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  cursor: pointer; /* Signal to user that the element is clickable */
+  user-select: none; /* Prevents text highlight flashing during double-clicks */
 }
