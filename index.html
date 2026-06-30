@@ -1,42 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Fitness Tracker</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+
+  <style>
+    /* Ensures smooth transitions when using anchor links */
+    html {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      line-height: 1.6; /* Improves readability */
+    }
+
+    header {
+      padding: 80px 20px;
+      background: #1e293b;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cbd5e1;
+      margin: 0 auto 15px auto;
+      max-width: 600px; /* Prevents text from stretching too wide on desktop */
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #38bdf8;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.2s ease, transform 0.2s ease; /* Smooth hover effect */
+    }
+
+    /* Subtle interactive feedback for desktop users */
+    .btn:hover {
+      background: #7dd3fc;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    footer {
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #cbd5e1; /* Made slightly lighter for better readability contrast */
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>💪 My Fitness Tracker</h1>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <p>This is my GitHub Pages site 🚀</p>
+    <a class="btn" href="#about">Learn More</a>
+  </header>
 
-  <div class="card">
-    <h2>Daily Goals</h2>
-
-    <label><input type="checkbox"> Workout</label><br>
-    <label><input type="checkbox"> 10,000 Steps</label><br>
-    <label><input type="checkbox"> Drink Water</label><br>
-    <label><input type="checkbox"> Healthy Meals</label><br>
-    <label><input type="checkbox"> Sleep 8–10 Hours</label>
-  </div>
-
-  <div class="card">
-    <h2>Workout Plan</h2>
+  <section id="about">
+    <h2>About Me</h2>
     <p>
-      Mon: Squats, push-ups, lunges, plank<br>
-      Tue: Cardio (walk/bike/sport)<br>
-      Wed: Full body workout<br>
-      Thu: Active day<br>
-      Fri: Repeat Monday<br>
-      Sat: Sport or walk<br>
-      Sun: Rest
+      Write something about yourself here. You can talk about your hobbies,
+      projects, or anything you like.
     </p>
-  </div>
+  </section>
 
-  <div class="card">
-    <h2>Motivation</h2>
-    <p>Small habits every day = big results over time. Keep going 💪</p>
-  </div>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>Add your GitHub projects here later.</p>
+  </section>
 
-  <script src="script.js"></script>
+  <footer>
+    © 2026 My Website
+  </footer>
+
 </body>
 </html>
